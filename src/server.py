@@ -1,7 +1,11 @@
 ## www.kirkdurbin.com
 ## www.blackhatacademy.org
 
-from bottle import *
+try:
+	from bottle import *
+except ImportError:
+	print "Bottle not installed!"
+	sys.exit(0)
 
 @route('/<filepath:path>')
 
