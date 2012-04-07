@@ -20,6 +20,8 @@ The Blackhat Academy Assault Kit is a security application that weaponizes the r
 II. Usage
 +--------+
 
+Dependencies: bottle.py -- To install, execute 'pip install bottle'. For more information, visit www.bottlepy.org
+
 As of right now, BHAAK only consists of a cross-site content forgery script to use on Facebook. For more information on XSCF, visit http://www.blackhatacademy.org/security101/Facebook#Content_Forgery. 
 
 The link above will direct you to more information about the way this script works, however, it is not the same source code. The original script was written in PHP, however, they work the same way.
