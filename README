@@ -1,0 +1,40 @@
++---------------------+
+|   Blackhat Academy  | 
+|     Assault Kit     |
++---------------------+
+
++---------------------+
+I. Introduction
+II. Usage
+III. About
++---------------------+
+
++--------------+
+I. Introduction
++--------------+
+The Blackhat Academy Assault Kit is a security application that weaponizes the releases at the Blackhat Academy. BHAAK is meant for educational purposes only. The Blackhat Academy or any of the Blackhat Academy's staff cannot be held responsible for any illegal or unethical use of this tool. 
+
++---------------------+
+
++--------+
+II. Usage
++--------+
+
+As of right now, BHAAK only consists of a cross-site content forgery script to use on Facebook. For more information on XSCF, visit http://www.blackhatacademy.org/security101/Facebook#Content_Forgery. 
+
+The link above will direct you to more information about the way this script works, however, it is not the same source code. The original script was written in PHP, however, they work the same way.
+
+To use the xscf script, in a command line, navigate to the directory of BHAAK. Using python 2.7 as root, execute the xscf.py script and it will prompt you for a website to clone and the "infected" website. Enter the two URLs and then the script will start a webserver on port 80. 
+
+I have found the best way to use this is to go to a URL shortening service, such as goo.gl or tinyurl, and posting your IP. Post the shortend URL to your Facebook wall and Facebook will fetch the thumbnail and information from the cloned website, however, when somebody clicks it, they will be taken to the "infected" website.
+
++---------------------+
+
++----------+
+III. About
++----------+
+
+BHAAK is an ongoing project and will incorporate various attacks based on releases from the Blackhat Academy.  Feel free to use, edit, and modify the program; just remember to give credit. For more information, questions, comments, concerns, or found bugs, please visit one of the websites below or send me an e-mail.
+
+www.kirkdurbin.com -- d1zzy.lulz@gmail.com
+www.blackhatacademy.org
