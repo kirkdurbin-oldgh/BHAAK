@@ -5,6 +5,7 @@ try:
 	from bottle import *
 except ImportError:
 	print "Bottle not installed!"
+	print "Download Bottle at https://www.bottlepy.org"
 	sys.exit(0)
 
 @route('/<filepath:path>')
