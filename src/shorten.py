@@ -16,6 +16,5 @@ def shorten_url():
 	api = googl.Googl(key)
 	generate = api.shorten(ip_addr)
 	short_url = generate.get('id')
-	#\print short_url
 	return short_url
 	
