@@ -10,3 +10,6 @@ if os.geteuid() != 0:
 	sys.exit('You are not root!')
 else:
 	from src import cloner, server
+	#from src import shorten
+	#short_url = shorten.shorten_url()
+	#print "Link to post to Facebook: " + short_url

