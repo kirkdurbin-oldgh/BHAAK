@@ -12,9 +12,9 @@ def get_ip():
 
 def shorten_url():
 	ip_addr = get_ip()
-	key = "AIzaSyB_75xcjif1ZSl565PynVgH6XtFGPzrwF8"
-	api = googl.Googl(key)
-	generate = api.shorten(ip_addr)
+	api = googl.Googl()
+	generate = api.shorten("http://" + ip_addr)
 	short_url = generate.get('id')
 	return short_url
 	
+shorten_url()

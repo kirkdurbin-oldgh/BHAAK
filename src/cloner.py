@@ -16,13 +16,13 @@ def clone_site():
 	site_clone = raw_input("Enter website to clone: ")
 	infected_clone = raw_input("Enter the infected site: ")
 	try:
-		subprocess.Popen('rm -f tmp/clone.html', shell=True) #wget is weird and appends code rather than overwrite, so rm first
-		subprocess.Popen('rm -f tmp/infected.html', shell=True)
+		#subprocess.Popen('rm -f ../tmp/clone.html', shell=True) #wget is weird and appends code rather than overwrite, so rm first
+		#subprocess.Popen('rm -f tmp/infected.html', shell=True)
 		
 		print ""
 		print "[+] Cloning websites..."
 		
-		subprocess.Popen('cd tmp/; wget --no-check-certificate -O clone.html -N -c -k %s' % (site_clone), stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True).wait()
+		subprocess.Popen('cd tmp/; rm -f clone.html infected.html; wget --no-check-certificate -O clone.html -N -c -k %s' % (site_clone), stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True).wait()
 		subprocess.Popen('cd tmp/; wget --no-check-certificate -O infected.html -N -c -k %s' % (infected_clone), stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True).wait()
 		
 		print "[+] Clone complete..."
